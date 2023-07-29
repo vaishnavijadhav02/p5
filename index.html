@@ -1,0 +1,34 @@
+<html>
+<head>
+	<title> App by vaishnavi </title>
+	<style>
+		*{ font-size:40px; }
+	</style>
+	<script>
+		function show()
+		{
+		event.preventDefault();
+		let ans = document.getElementById("ans");
+
+		// we created array of msgs
+		let mm = ["Live & let live", "just do it", "change is constant", "i will do it",]
+
+		//we are selecting any one random msg 
+		let r = parseInt(Math.random() * mm.length);
+
+		//we are showing msg
+		ans.innerHTML = mm[r];
+		}
+	</script>
+</head>
+
+<body>
+<center>
+	<h1> Motivational msg v1 </h1>
+	<form onsubmit="show()">
+	<input type="submit"value="Get msg"/>
+	</form>
+	<h1 id="ans"/>
+</center>
+</body>
+</html>
